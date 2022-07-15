@@ -1,0 +1,19 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+message CommunitySign {
+	uint64 Type        = 1; //
+	uint64 StartHeight = 2;//
+	uint64 EndHeight   = 3;//
+	uint64 Rand        = 4;//
+	bytes  Puk         = 5;//
+	bytes  Sign        = 6;//
+}

@@ -1,0 +1,26 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+import "txbase.proto";
+
+message TxVoteIn {
+	TxBase         TxBase    = 1;
+	bytes          Vote      = 2; //
+    uint32         VoteType  = 3; // 1=；2=；3=；
+    bytes          VoteAddr  = 4; //。，。
+}
+
+message TxVoteOut {
+	TxBase TxBase = 1;
+	bytes          Vote      = 2; //
+    uint32         VoteType  = 3; // 1=；2=；3=；
+    bytes          VoteAddr  = 4; //。，。
+}

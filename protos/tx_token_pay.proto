@@ -1,0 +1,22 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+import "txbase.proto";
+
+message TxTokenPay {
+	TxBase           TxBase             = 1;
+	bytes            Token_Txid         = 2;
+    uint64           Token_Vin_total    = 3; //
+    repeated Vin     Token_Vin          = 4; //
+    uint64           Token_Vout_total   = 5; //
+    repeated Vout    Token_Vout         = 6; //
+}
+

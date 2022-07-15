@@ -1,0 +1,35 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+message TxBase {
+	bytes    Hash        =1;  //hash，hash，
+	uint64   Type        =2;  //，0=，;1=
+	uint64   Vin_total   =3;  //
+	repeated Vin   Vin   =4;  //
+	uint64   Vout_total  =5;  //
+	repeated Vout  Vout  =6;  //
+	uint64   Gas         =7;  //，hash
+	uint64   LockHeight  =8;  //，，。
+	bytes    Payload     =9;  //
+	bytes    BlockHash   =10;  //hash，hash，
+}
+
+message Vin {
+    bytes    Puk    =1; //
+    bytes    Sign   =2; //，（，，）。
+    bytes    Nonce  =3; //
+}
+
+message Vout {
+    uint64       Value         =1;  // =  * 100000000
+    bytes        Address       =2;  //
+    uint64       FrozenHeight  =3;  //。，
+}

@@ -1,0 +1,17 @@
+{
+  "netid": 1,
+  "ip": "127.0.0.1",
+  "port": 19981,
+  "WebAddr": "0.0.0.0",
+  "WebPort": 2080,
+  "WebStatic": "./static",
+  "WebViews": "./views",
+  "RpcServer": true,
+  "RpcUser": "test",
+  "RpcPassword": "testp",
+  "miner": true,
+  "NetType": "not release",
+  "AddrPre": "SELF",
+  "WalletPwd": "123456789",
+  "end": 0
+}

@@ -1,0 +1,18 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+import "blockhead.proto";
+
+message BlockHeadAndTxs {
+	bytes            StaretBlockHash        =1;  //
+	BlockHead        Bh                     =2;  //
+	repeated bytes   TxBs                   =3;  //
+}

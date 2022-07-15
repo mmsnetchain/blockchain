@@ -1,0 +1,20 @@
+//
+//proto3proto2
+//protobuf
+//https://www.jianshu.com/p/4443c28d4bf7
+syntax = "proto3";
+
+//，protocgo
+package go_protos;
+
+option go_package = "./go_protos";
+
+message Nameinfo {
+    string                  Name             = 1 ; //
+    bytes                   Txid             = 2 ; //id
+    repeated  bytes         NetIds           = 3 ; //
+    repeated  bytes         AddrCoins        = 4 ; //
+    uint64                  Height           = 5 ; //，
+    uint64                  NameOfValidity   = 6 ; //
+    uint64                  Deposit          = 7 ; //
+}
